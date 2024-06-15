@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
 import SignUp from './pages/SignUp';
 import Header from './components/Header';
-// import Footer from './components/Footer';
+import FooterDown from './components/Footer';
 // import PrivateRoute from './components/PrivateRoute';
 // import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
 // import CreatePost from './pages/CreatePost';
@@ -37,7 +37,9 @@ export default function App() {
         <Route path='/project' element={<Project />} />
         {/* <Route path='/post/:postSlug' element={<PostPage />} /> */}
       </Routes>
-      {/* <Footer /> */}
+      <FooterDown />
+      
     </div>
+    
   );
 }
