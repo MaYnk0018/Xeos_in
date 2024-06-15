@@ -17,8 +17,18 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api/auth', authRouter);
-
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
+app.use('/api/auth', authRouter);
+app.get((err, req, res, next)=>{
+  const message=  `server error`;
+  const errorCode= err.statusCode;
+  res.status(errorCode).json({
+    error: "failed",
+    message,
+    errorCode
+  })
+})
+
+
