@@ -21,6 +21,7 @@ app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
 app.use('/api/auth', authRouter);
+
 app.get((err, req, res, next)=>{
   const message=  `server error`;
   const errorCode= err.statusCode;
